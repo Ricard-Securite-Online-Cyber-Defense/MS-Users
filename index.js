@@ -11,8 +11,6 @@ app.post('/', async (req, res) => {
         baseDN: 'dc=killerbee,dc=com',
     }
 
-    res.send("aze")
-
     let ad = new ActiveDirectory(config);
     let username = req.body.email;
     let password = decrypt(req.body.password);
